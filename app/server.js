@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3002;
 
@@ -21,6 +22,13 @@ const port = process.env.PORT || 3002;
 //     res.status(500).send('Erro ao buscar os burgers');
 //   }
 // });
+
+const corsOptions = {
+  origin: 'https://make-burger-one.vercel.app',
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
