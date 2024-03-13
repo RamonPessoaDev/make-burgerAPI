@@ -24,7 +24,7 @@ const port = process.env.PORT || 3002;
 
 app.use(express.json());
 
-const dbPath = path.join(__dirname, 'app', 'db.json');
+const dbPath = path.join(__dirname, 'db.json');
 
 app.get('/ingredientes', (req, res) => {
   fs.readFile(dbPath, 'utf8', (err, data) => {
