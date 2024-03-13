@@ -2,9 +2,9 @@
   "name": "make-burguer-api",
   "version": "1.0.0",
   "description": "API make-burger",
-  "main": "./server.js",
+  "main": "./app/server.js",
   "scripts": {
-    "start": "node ./server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "DarkDev",

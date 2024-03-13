@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /dist
-
+functions
 
 # local env files
 .env.local
@@ -21,5 +21,9 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+.dockerignore
 
 .vercel
+
+docker-compose.yml
+Dockerfile
