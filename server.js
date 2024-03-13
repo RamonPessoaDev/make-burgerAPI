@@ -2,11 +2,11 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3002;
 
 app.use(express.json());
 
-const dbPath = path.join(__dirname, 'db', 'db.json');
+const dbPath = path.join('db.json');
 
 app.get('/ingredientes', (req, res) => {
   fs.readFile(dbPath, 'utf8', (err, data) => {
