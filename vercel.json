@@ -1,5 +1,11 @@
 {
   "version": 2,
   "builds": [{ "src": ".server/server.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/" }]
+  "routes": [
+    { "src": "/ingredientes", "dest": "/(.server/server.js" },
+    { "src": "/burgers", "dest": "/(.server/server.js" },
+    { "src": "/status", "dest": "/(.server/server.js" },
+    { "src": "/burgers/:id", "dest": "/(.server/server.js" },
+    { "src": "/(.*)", "dest": "/" }
+  ]
 }
