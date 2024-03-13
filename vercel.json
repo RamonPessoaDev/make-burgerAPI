@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "builds": [{ "src": ".server/server.js", "use": "@vercel/node" }],
+  "builds": [{ "src": "./server.js", "use": "@vercel/node" }],
   "routes": [
-    { "src": "/ingredientes", "dest": "/(.server/server.js" },
-    { "src": "/burgers", "dest": "/(.server/server.js" },
-    { "src": "/status", "dest": "/(.server/server.js" },
-    { "src": "/burgers/:id", "dest": "/(.server/server.js" },
-    { "src": "/(.*)", "dest": "/" }
+    { "src": "/ingredientes", "dest": "./server.js" },
+    { "src": "/burgers", "dest": "/.server.js" },
+    { "src": "/status", "dest": "/.server.js" },
+    { "src": "/burgers/:id", "dest": "./server.js" },
+    { "src": "/(.*)", "dest": "/.server.js" }
   ]
 }
