@@ -1,0 +1,10 @@
+{
+  "name": "make-burguer-api",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}

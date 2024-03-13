@@ -1,0 +1,162 @@
+{
+  "ingredientes": {
+    "paes": [
+      {
+        "id": 1,
+        "tipo": "Italiano Branco"
+      },
+      {
+        "id": 2,
+        "tipo": "3 Queijos"
+      },
+      {
+        "id": 3,
+        "tipo": "Parmesão e Orégano"
+      },
+      {
+        "id": 4,
+        "tipo": "Integral"
+      }
+    ],
+    "carnes": [
+      {
+        "id": 1,
+        "tipo": "Maminha"
+      },
+      {
+        "id": 2,
+        "tipo": "Alcatra"
+      },
+      {
+        "id": 3,
+        "tipo": "Picanha"
+      },
+      {
+        "id": 4,
+        "tipo": "Veggie burger"
+      }
+    ],
+    "opcionais": [
+      {
+        "id": 1,
+        "tipo": "Bacon"
+      },
+      {
+        "id": 2,
+        "tipo": "Cheddar"
+      },
+      {
+        "id": 3,
+        "tipo": "Salame"
+      },
+      {
+        "id": 4,
+        "tipo": "Tomate"
+      },
+      {
+        "id": 4,
+        "tipo": "Cebola roxa"
+      },
+      {
+        "id": 4,
+        "tipo": "Pepino"
+      }
+    ]
+  },
+  "status": [
+    {
+      "id": "1",
+      "tipo": "Solicitado"
+    },
+    {
+      "id": "2",
+      "tipo": "Em produção"
+    },
+    {
+      "id": "3",
+      "tipo": "Finalizado"
+    }
+  ],
+  "burgers": [
+    {
+      "id": "c3f7",
+      "nome": "Stela",
+      "carne": "Picanha",
+      "pao": "3 Queijos",
+      "opcionais": ["Bacon", "Cebola roxa", "Cheddar"],
+      "status": "Finalizado"
+    },
+    {
+      "id": "e1a5",
+      "nome": "hgdfhdf",
+      "carne": "Alcatra",
+      "pao": "Parmesão e Orégano",
+      "opcionais": ["Salame", "Bacon"],
+      "status": "Solicitado"
+    },
+    {
+      "id": "9d35",
+      "nome": "sasasasasasasa",
+      "carne": "Alcatra",
+      "pao": "Parmesão e Orégano",
+      "opcionais": ["Bacon", "Salame", "Cebola roxa", "Cheddar"],
+      "status": "Solicitado"
+    },
+    {
+      "id": "f328",
+      "nome": "gfgfgfgf",
+      "carne": "Maminha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": ["Bacon", "Salame"],
+      "status": "Solicitado"
+    },
+    {
+      "id": "3fda",
+      "nome": "fgdgdfgdf",
+      "carne": "Maminha",
+      "pao": "3 Queijos",
+      "opcionais": ["Bacon", "Salame", "Tomate"],
+      "status": "Solicitado"
+    },
+    {
+      "id": "6665",
+      "nome": "bbbbbbbb",
+      "carne": "Veggie burger",
+      "pao": "Integral",
+      "opcionais": ["Salame", "Cebola roxa", "Tomate", "Pepino"],
+      "status": "Em produção"
+    },
+    {
+      "id": "aaba",
+      "nome": "Alex",
+      "carne": "Picanha",
+      "pao": "Italiano Branco",
+      "opcionais": ["Bacon", "Cheddar", "Cebola roxa"],
+      "status": "Em produção"
+    },
+    {
+      "id": "696d",
+      "nome": "Vitor",
+      "carne": "Maminha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Tomate",
+        "Cheddar",
+        "Pepino",
+        "Cebola roxa",
+        "Salame",
+        "Bacon"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "5f58",
+      "nome": "Lígia",
+      "carne": "Maminha",
+      "pao": "3 Queijos",
+      "opcionais": ["Bacon", "Cheddar", "Cebola roxa", "Tomate"],
+      "status": "Solicitado"
+    },
+    {}
+  ]
+}
