@@ -1,7 +1,7 @@
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
-const cors = require('cors');
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
+const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 3002;
 
@@ -25,53 +25,53 @@ const port = process.env.PORT || 3002;
 
 const corsOptions = {
   origin: "*",
-  optionsSuccessStatus: 200
+  optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
 
 app.use(express.json());
 
-const dbPath = path.join(__dirname, 'db.json');
+const dbPath = path.join(__dirname, "db.json");
 
-app.get('/ingredientes', (req, res) => {
-  fs.readFile(dbPath, 'utf8', (err, data) => {
+app.get("/ingredientes", (req, res) => {
+  fs.readFile(dbPath, "utf8", (err, data) => {
     if (err) {
       console.error(err);
-      return res.status(500).send('Erro ao ler o arquivo db.json');
+      return res.status(500).send("Erro ao ler o arquivo db.json");
     }
     const dbJson = JSON.parse(data);
     res.json(dbJson);
   });
 });
 
-app.get('/burgers', (req, res) => {
-  fs.readFile(dbPath, 'utf8', (err, data) => {
+app.get("/burgers", (req, res) => {
+  fs.readFile(dbPath, "utf8", (err, data) => {
     if (err) {
       console.error(err);
-      return res.status(500).send('Erro ao ler o arquivo db.json');
+      return res.status(500).send("Erro ao ler o arquivo db.json");
     }
     const dbJson = JSON.parse(data);
     res.json(dbJson.burgers);
   });
 });
 
-app.get('/status', (req, res) => {
-  fs.readFile(dbPath, 'utf8', (err, data) => {
+app.get("/status", (req, res) => {
+  fs.readFile(dbPath, "utf8", (err, data) => {
     if (err) {
       console.error(err);
-      return res.status(500).send('Erro ao ler o arquivo db.json');
+      return res.status(500).send("Erro ao ler o arquivo db.json");
     }
     const dbJson = JSON.parse(data);
     res.json(dbJson.status);
   });
 });
 
-app.post('/burgers', (req, res) => {
-  fs.readFile(dbPath, 'utf8', (err, data) => {
+app.post("/burgers", (req, res) => {
+  fs.readFile(dbPath, "utf8", (err, data) => {
     if (err) {
       console.error(err);
-      return res.status(500).send('Erro ao ler o arquivo db.json');
+      return res.status(500).send("Erro ao ler o arquivo db.json");
     }
     const dbJson = JSON.parse(data);
     const newBurger = req.body;
@@ -79,33 +79,33 @@ app.post('/burgers', (req, res) => {
     fs.writeFile(dbPath, JSON.stringify(dbJson, null, 2), (err) => {
       if (err) {
         console.error(err);
-        return res.status(500).send('Erro ao salvar o arquivo db.json');
+        return res.status(500).send("Erro ao salvar o arquivo db.json");
       }
       res.status(201).json(newBurger);
     });
   });
 });
 
-app.delete('/burgers/:id', (req, res) => {
-  fs.readFile(dbPath, 'utf8', (err, data) => {
+app.delete("/burgers/:id", (req, res) => {
+  fs.readFile(dbPath, "utf8", (err, data) => {
     if (err) {
       console.error(err);
-      return res.status(500).send('Erro ao ler o arquivo db.json');
+      return res.status(500).send("Erro ao ler o arquivo db.json");
     }
     const dbJson = JSON.parse(data);
     const id = req.params.id;
-    const index = dbJson.burgers.findIndex(burger => burger.id === id);
+    const index = dbJson.burgers.findIndex((burger) => burger.id === id);
     if (index !== -1) {
       dbJson.burgers.splice(index, 1);
       fs.writeFile(dbPath, JSON.stringify(dbJson, null, 2), (err) => {
         if (err) {
           console.error(err);
-          return res.status(500).send('Erro ao salvar o arquivo db.json');
+          return res.status(500).send("Erro ao salvar o arquivo db.json");
         }
         res.status(200).json({ id: id });
       });
     } else {
-      res.status(404).send('Burger não encontrado');
+      res.status(404).send("Burger não encontrado");
     }
   });
 });
