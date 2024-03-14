@@ -24,8 +24,7 @@ const port = process.env.PORT || 3002;
 // });
 
 const corsOptions = {
-  origin: ['https://make-burger-pbh9vbt40-ramon-pessoas-projects.vercel.app', "https://makeburgerdark.netlify.app",
-    "http://localhost:8080"],
+  origin: "*",
   optionsSuccessStatus: 200
 };
 
